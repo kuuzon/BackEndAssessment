@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color:  black;
+}
+
+p {
+    font-family: inherit;
+    font-weight: 300;
+}
+  
+li {
+    font-family: inherit;
+    font-weight: 300;
+}
+
+/** Navbar **/
+.bg-light {
+    background-color: rgb(232, 232, 232);
+}
+
+.navbar-brand {
+    font: inherit;
+}
+
+/** Carousel **/
+header .carousel {
+    padding-bottom: 20px;
+}
+
+/** Main Content Container **/
+.main-content {
+    padding-bottom: 20px;
+}
+
+/** Marketing Container **/
+.marketing {
+    padding-bottom: 20px;
+}
+
+.marketing h3 {
+    font-size: large;
+}
+
+/** Trending Container **/
+.trending {
+    padding-bottom: 20px;
+}
+
+/** Footer **/
+footer .navbar-text {
+    font-size: small;
+}
