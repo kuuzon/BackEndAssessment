@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  background-color: whitesmoke;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,24 +23,133 @@ li {
     font-weight: 300;
 }
 
-/** Navbar **/
-.bg-light {
-    background-color: rgb(232, 232, 232);
-}
-
-.navbar-brand {
-    font: inherit;
-}
-
-/** Carousel **/
-header .carousel {
+article {
     padding-bottom: 20px;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+/** Navbar **/
+header .navbar {
+    font: inherit;
+    background: whitesmoke;
+    margin-bottom: 0;
+    border-radius: 0; 
+}
+
+header .navbar-brand {
+    font: inherit;
+    font-size: larger;
+}
+
+/** Home Jumbotron **/
+#home .jumbotron {
+  height: 58vh;
+  padding-bottom: 40px;
+  background: url(../images/jumbotronhome.jpg) no-repeat 100% 5%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/** Feedback Jumbotron **/
+#feedback .jumbotron {
+  height: 58vh;
+  padding-bottom: 40px;
+  background: url(../images/jumbotronfeedback.jpg) no-repeat 100% 5%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /** Main Content Container **/
 .main-content {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
+
+
+/** Card Carousel **/
+@media (min-width: 768px) {
+    
+  .carousel {
+    padding-bottom: 40px;   
+  }
+
+    /* show 3 items */
+    .carousel-item { 
+        margin-right: auto !important; 
+    }
+    
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item {
+      display: block;
+    }
+  
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+    }
+  
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.3333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+  
+
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+  
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+    }
+
+    /** Card group same dimensions **/
+    .card-group {
+        display: flex;
+    }
+}  
 
 /** Marketing Container **/
 .marketing {
@@ -50,9 +160,117 @@ header .carousel {
     font-size: large;
 }
 
-/** Trending Container **/
-.trending {
+/** Trending Pixgrid **/
+.trending-grid {
+    padding-bottom: 40px;
+}
+
+.pixgrid {
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .pixgrid img {
+    width: 20%;
+  }
+}
+
+/** Sign Up Reminder Card **/
+.card-signup {
+    background: url(../images/signupcard.jpg) no-repeat 100% 90%;
+    background-size: cover;
+    padding-top: 20px;
     padding-bottom: 20px;
+}
+
+/** Courses & Coursesdetails **/
+.courses {
+  font-size: 1.8rem;
+  line-height: 160%;
+}
+
+#courses .courses-img {
+  margin-right: 20px;
+}
+
+.courses-title {
+  font-size: 1.7em;
+}
+
+#home .courses-title {
+  font-size: 1.5em;
+}
+
+#coursedetails .courses-title {
+  font-size: 2.4em;
+}
+
+#coursedetails .courses-img {
+  margin: 20px 0;
+}
+
+/** Star Ratings (Experimental**/
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+}
+
+.star-rating .fa-star{
+  color: orange;
+}
+
+/** Feedback Items **/
+
+.chat-display {
+  min-height: 150px;
+  max-height: 40vh;
+  overflow: scroll;
+  font-size: 1.2em;
+}
+
+.chat-display p {
+  font-size: .9em;
+  padding: 0 10px;
+}
+
+.feedback, .feedback-form-title {
+  font-size: 2rem;
+}
+
+.feedback-form {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+
+.feedback-title {
+  font-size: 1.2em;
+}
+
+.feedback-form-title {
+  font-size: 2em;
+}
+
+.feedback-name {
+  font-size: .6em;
+  font-weight: 100;
+}
+
+.feedback-message {
+  font-weight: 100;
+  font-size: .9em;
+  line-height: 120%;
+  margin-top: 5px;
+}
+
+.feedback-item {
+  border-bottom: 1px solid gray;
+  padding: 8px 0;
+}
+
+.feedback-item:last-of-type {
+  border-bottom: none;
 }
 
 /** Footer **/
