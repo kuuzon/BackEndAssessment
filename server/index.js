@@ -4,11 +4,14 @@ const path = require('path');
 
 const createErrors = require ('http-errors'); 
 const routes = require('./routes/routes');
+const configs = require('./config')
 
 
 //Starting app & development mode
 const app = express();
-//const config = configs[app.get('env')];
+const config = configs[app.get('env')];
+
+console.log(config.sitename)  //Testing the current development environment
 
 
 //Creating Objects from class modules
