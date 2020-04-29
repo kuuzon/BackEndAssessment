@@ -3,9 +3,9 @@ const router = express.Router();
 
 const feedbackRoutes = ()=> {
     router.get('/', (req, res)=>{
-        return res.send('Feedback page')
+        return res.render('feedback')
     })
-    
+
     return router
 }
 

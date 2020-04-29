@@ -1,13 +1,15 @@
 const express = require ('express');
 const path = require('path'); 
-const bodyParser = require ('body-parser')
+//const bodyParser = require ('body-parser')
 
 const createErrors = require ('http-errors'); 
 const routes = require('./routes/routes');
 
+
 //Starting app & development mode
 const app = express();
-const config = configs[app.get('env')];
+//const config = configs[app.get('env')];
+
 
 //Creating Objects from class modules
 
@@ -19,6 +21,7 @@ if(app.get('env') === 'development'){
     app.locals.pretty = true
 }
 
+
 //Routing & Services
 app.use('/', routes())
 
@@ -27,6 +30,7 @@ app.use('/', routes())
 //Setup of Express & Views
 app.use(express.static('public'))
 
+app.set('views', path.join(__dirname, './views'))
 
 
 //Error Functions

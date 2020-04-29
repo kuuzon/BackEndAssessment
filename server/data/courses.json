@@ -1,0 +1,66 @@
+{
+    "courses": [{
+        "university" : "The University of Melbourne",
+        "university_logo": "MULogo.jpg",
+        "university_logo_small": "MULogosmall.jpg",
+        "coursenames": ["Arts", "Commerce", "Juris Doctor", "Sciences"],
+        "notes": [{
+            "name": "Business Finance",
+            "author": "h1sforfuns",
+            "image": "commui.png",
+            "time_stamp": "1 year ago"
+        },{
+            "name": "Engineering Mathematics",
+            "author": "examinator",
+            "image": "engiui.png",
+            "time_stamp": "6 months ago"
+        },{
+            "name": "Torts Law",
+            "author": "h1sforfuns",
+            "image": "lawui.png",
+            "time_stamp": "9 months ago"
+        }]
+    },{
+        "university" : "Monash University",
+        "university_logo": "MonLogo.jpg",
+        "university_logo_small": "MonLogosmall.jpg",
+        "coursenames": ["Arts", "Commerce", "Engineering", "Law", "Sciences"],
+        "notes": [{
+            "name": "Global Politics",
+            "author": "examinator",
+            "image": "artsui.png",
+            "time_stamp": "2 years ago"
+        },{
+            "name": "Biochemistry",
+            "author": "rimmer",
+            "image": "sciui.png",
+            "time_stamp": "6 months ago"
+        },{
+            "name": "Constitutional Law",
+            "author": "Kat",
+            "image": "lawui.png",
+            "time_stamp": "11 months ago"
+        }]
+    },{
+        "university" : "Holmesglen Institute",
+        "university_logo": "HolmLogo.jpg",
+        "university_logo_small": "HolmLogosmall.jpg",
+        "coursenames": ["Arts and Design", "Hospitality", "Web Development"],
+        "notes": [{
+            "name": "Apply Introductory Object-Oriented Language Skills",
+            "author": "alexisneverlate",
+            "image": "itui.png",
+            "time_stamp": "1 month ago"
+        },{
+            "name": "Use Library or Pre-Existing Components",
+            "author": "alexisneverlate",
+            "image": "itui.png",
+            "time_stamp": "1 month ago"
+        },{
+            "name": "Implement and Monitor Marketing Activities",
+            "author": "alexisneverlate",
+            "image": "itui.png",
+            "time_stamp": "1 month ago"
+        }]
+    }]
+}
