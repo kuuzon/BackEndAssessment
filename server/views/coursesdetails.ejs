@@ -18,17 +18,18 @@
     <!--ADD: Star rating below titles of subjects-->
     <div class="container pb-5">
         <ul class="list-unstyled">
+            <!-- <% coursesList.forEach(function(item){ %>  ?????????  -->
             <li class="media">
-            <img src="../../public/images/courses/commui.png" class="mr-3" alt="...">
+            <img src="/images/courses/<%= courses.notes.image %>" class="mr-3" alt="...">
             <div class="media-body">
                 <h3 class="mt-0 mb-1">
-                    <a href="./business_finance.html">Business Finance</a>
+                    <a href="./business_finance.html"><%= courses.notes.name %></a>
                 </h3>
-                <i>Submitted by <span class="badge badge-info">h1sforfuns</span> 1 year ago</i>
+                <i>Submitted by <span class="badge badge-info"><%= courses.notes.author %></span> <%= courses.notes.time_stamp %></i>
             </div>
             </li>
 
-            <li class="media my-4">
+            <!-- <li class="media my-4">
                 <img src="../../public/images/courses/engiui.png" class="mr-3" alt="...">
                 <div class="media-body">
                     <h3 class="mt-0 mb-1">
@@ -46,7 +47,10 @@
                     </h3>
                     <i>Submitted by <span class="badge badge-info">h1forfuns</span> 9 months ago</i>
                 </div>
-            </li>
+            </li> -->
+
+
+        <!-- <% }) %>  ????????????  -->
         </ul>
     </div>
 

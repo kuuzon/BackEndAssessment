@@ -8,17 +8,17 @@
         "notes": [{
             "name": "Business Finance",
             "author": "h1sforfuns",
-            "image": "commui.png",
+            "image": "commui",
             "time_stamp": "1 year ago"
         },{
             "name": "Engineering Mathematics",
             "author": "examinator",
-            "image": "engiui.png",
+            "image": "engiui",
             "time_stamp": "6 months ago"
         },{
             "name": "Torts Law",
             "author": "h1sforfuns",
-            "image": "lawui.png",
+            "image": "lawui",
             "time_stamp": "9 months ago"
         }]
     },{
@@ -30,17 +30,17 @@
         "notes": [{
             "name": "Global Politics",
             "author": "examinator",
-            "image": "artsui.png",
+            "image": "artsui",
             "time_stamp": "2 years ago"
         },{
             "name": "Biochemistry",
             "author": "rimmer",
-            "image": "sciui.png",
+            "image": "sciui",
             "time_stamp": "6 months ago"
         },{
             "name": "Constitutional Law",
             "author": "Kat",
-            "image": "lawui.png",
+            "image": "lawui",
             "time_stamp": "11 months ago"
         }]
     },{
@@ -52,17 +52,17 @@
         "notes": [{
             "name": "Apply Introductory Object-Oriented Language Skills",
             "author": "alexisneverlate",
-            "image": "itui.png",
+            "image": "itui",
             "time_stamp": "1 month ago"
         },{
             "name": "Use Library or Pre-Existing Components",
             "author": "alexisneverlate",
-            "image": "itui.png",
+            "image": "itui",
             "time_stamp": "1 month ago"
         },{
             "name": "Implement and Monitor Marketing Activities",
             "author": "alexisneverlate",
-            "image": "itui.png",
+            "image": "itui",
             "time_stamp": "1 month ago"
         }]
     }]

@@ -7,9 +7,10 @@ module.exports = (param)=> {
     
     const { coursesService } = param;
     
-    router.get('/', async(req, res) => {
+    router.get('/', async(req, res, next) => {
         
         const coursesList = await coursesService.getList()
+        
         return res.render('index', {page: 'home', coursesList})
     })
 

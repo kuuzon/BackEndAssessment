@@ -66,8 +66,9 @@ class CoursesService {
         })
     }
 
-    //FUNCTION 2: Retrieve data to match specific user request
-    async getCoursesForUni(uni_shortname){
+    //FUNCTION 2: Retrieve data to match specific user request 
+    //QUERY: (DO I NEED BOTH OR JUST ONE?)
+    async getUniCourses(uni_shortname){
         const data = await this.getData();
         const courses = data.find((courses) => {
             return courses.uni_shortname === uni_shortname

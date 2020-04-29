@@ -5,19 +5,19 @@
         <div class="row">
           <div class="col-sm-4">
             <h1 class="feedback-form-title">Send us Feedback</h1>
-            <form class="feedback-form">
+            <form class="feedback-form" action="/feedback" method="POST">
               <div class="form-group">
                 <label for="feedback-form-name">Name</label>
-                <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
+                <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name" name="fbName">
               </div>
               <div class="form-group">
                 <label for="feedback-form-title">Title</label>
-                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+                <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback" name="fbTitle">
               </div>
               <div class="form-group">
                 <label for="feedback-form-message">Message</label>
                 <textarea type="text" placeholder="Enter your message, then hit the submit" class="form-control" id="feedback-form-message"
-                  rows="6"></textarea>
+                  rows="6" name="fbMessage"></textarea>
               </div>
               <!--Fix: Push button to the right (pull-right does not work)-->
               <button type="button" class="btn btn-info">Submit</button>
@@ -29,36 +29,18 @@
             <div class="maincontent feedback">
               <h2 class="article-title">Recent Feedback</h2>
               <div class="feedback-messages">
+                <% feedbackList.forEach(function(item){ %>
                 <div class="feedback-item item-list media-list">
                   <div class="feedback-item media">
                     <div class="feedback-info media-body">
                       <div class="feedback-head">
-                        <div class="feedback-title">Amazing Site <small class="feedback-name badge badge-pill badge-info">Dave</small></div>
+                        <div class="feedback-title"><%item.title %><small class="feedback-name badge badge-pill badge-info"><% item.name %></small></div>
                       </div>
-                      <div class="feedback-message">The notes I downloaded were so clear and concise.  Thanks Classnotes!</div>
+                      <div class="feedback-message"><% item.message %></div>
                     </div>
                   </div>
                 </div>
-                <div class="feedback-item item-list media-list">
-                  <div class="feedback-item media">
-                    <div class="feedback-info media-body">
-                      <div class="feedback-head">
-                        <div class="feedback-title">Great Notes! <small class="feedback-name badge badge-pill badge-info">Corinna</small></div>
-                      </div>
-                      <div class="feedback-message">Excellent H1 notes - I passed my recent law exam and these notes were a livesaver!</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="feedback-item item-list media-list">
-                  <div class="feedback-item media">
-                    <div class="feedback-info media-body">
-                      <div class="feedback-head">
-                        <div class="feedback-title">The Student's Holy Grail <small class="feedback-name badge badge-pill badge-info">Lister</small></div>
-                      </div>
-                      <div class="feedback-message">Smeggin' great notes!</div>
-                    </div>
-                  </div>
-                </div>
+                <% }) %>
               </div>
             </div>
           </aside>

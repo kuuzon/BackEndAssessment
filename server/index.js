@@ -9,7 +9,7 @@ const configs = require('./config')
 
 //Load Services Modules
 const CoursesService = require ('./services/CoursesService');
-//const FeedbackService = require ('./services/FeedbackService');
+const FeedbackService = require ('./services/FeedbackService');
 
 
 //Starting app & development mode
@@ -21,7 +21,7 @@ console.log(config.sitename)  //Testing the current development environment
 
 //Creating Objects from class modules
 const coursesService = new CoursesService(config.data.courses);
-//const feedbackService = new FeedbackService (config.data.feedback);
+const feedbackService = new FeedbackService (config.data.feedback);
 
 
 //Development Environment Conditions
@@ -34,16 +34,17 @@ if(app.get('env') === 'development'){
 app.use('/', routes())
 
 
-//Setup of Express & Views
+//Setup of Express, BodyParser & Views
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('views', path.join(__dirname, './views'))
 
 
 //Pass Services as param to the routes
 app.use('/', routes({
-    coursesService: coursesService
-    //feedbackService: feedbackService
+    coursesService: coursesService,
+    feedbackService: feedbackService
 }));
 
 
