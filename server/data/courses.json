@@ -1,8 +1,9 @@
 {
     "courses": [{
-        "university" : "The University of Melbourne",
-        "university_logo": "MULogo.jpg",
-        "university_logo_small": "MULogosmall.jpg",
+        "uni" : "The University of Melbourne",
+        "uni_shortname": "Melbourne University",
+        "uni_logo": "MULogo.jpg",
+        "uni_logo_small": "MULogosmall.jpg",
         "coursenames": ["Arts", "Commerce", "Juris Doctor", "Sciences"],
         "notes": [{
             "name": "Business Finance",
@@ -22,6 +23,7 @@
         }]
     },{
         "university" : "Monash University",
+        "university_short": "Monash University",
         "university_logo": "MonLogo.jpg",
         "university_logo_small": "MonLogosmall.jpg",
         "coursenames": ["Arts", "Commerce", "Engineering", "Law", "Sciences"],
@@ -43,6 +45,7 @@
         }]
     },{
         "university" : "Holmesglen Institute",
+        "university_short": "Holmesglen",
         "university_logo": "HolmLogo.jpg",
         "university_logo_small": "HolmLogosmall.jpg",
         "coursenames": ["Arts and Design", "Hospitality", "Web Development"],

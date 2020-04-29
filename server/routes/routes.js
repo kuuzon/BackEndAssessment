@@ -4,8 +4,11 @@ const coursesRoutes = require ('./courses');
 const feedbackRoutes = require ('./feedback');
 
 const routes = ()=> {
-    router.get('/', (req, res)=>{
-        return res.render('index')
+    const {coursesService} = param
+    
+    router.get('/', (req, res) => {
+        const coursesList = await coursesService.getList()
+        return res.render('index', {page: 'home', coursesList})
     })
 
     router.use('/courses', coursesRoutes())
