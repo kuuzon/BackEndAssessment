@@ -1,7 +1,7 @@
 {
     "courses": [{
         "uni" : "The University of Melbourne",
-        "uni_shortname": "Melbourne University",
+        "uni_shortname": "Melbourne_University",
         "uni_logo": "MULogo.jpg",
         "uni_logo_small": "MULogosmall.jpg",
         "coursenames": ["Arts", "Commerce", "Juris Doctor", "Sciences"],
@@ -23,7 +23,7 @@
         }]
     },{
         "university" : "Monash University",
-        "university_short": "Monash University",
+        "university_short": "Monash_University",
         "university_logo": "MonLogo.jpg",
         "university_logo_small": "MonLogosmall.jpg",
         "coursenames": ["Arts", "Commerce", "Engineering", "Law", "Sciences"],

@@ -21,10 +21,10 @@
             <div class="carousel-inner row w-100 mx-auto">
                 <div class="carousel-item col-md-4 active">
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="../../public/images/MULogo.jpg" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="./images/<%= item.uni_shortname %>_logo.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">University of Melbourne</h4>
-                            <p class="card-text"><strong>Courses Available: </strong>Commerce, Engineering, Juris Doctor & Sciences</p>
+                            <h4 class="card-title"><%= item.uni %></h4>
+                            <p class="card-text"><strong>Courses Available: </strong><%= item.coursenames %></p>
                             <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
                         </div>
                     </div>
