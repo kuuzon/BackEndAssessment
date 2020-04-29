@@ -3,19 +3,19 @@ const router = express.Router();
 const coursesRoutes = require ('./courses');
 const feedbackRoutes = require ('./feedback');
 
-const routes = ()=> {
-    const {coursesService} = param
+module.exports = (param)=> {
     
-    router.get('/', (req, res) => {
+    const { coursesService } = param;
+    
+    router.get('/', async(req, res) => {
+        
         const coursesList = await coursesService.getList()
         return res.render('index', {page: 'home', coursesList})
     })
 
-    router.use('/courses', coursesRoutes())
+    router.use('/courses', coursesRoutes(param));
 
-    router.use('/feedback', feedbackRoutes())
+    router.use('/feedback', feedbackRoutes(param));
 
     return router
 }
-
-module.exports = routes

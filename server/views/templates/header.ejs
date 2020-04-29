@@ -10,13 +10,13 @@
     
     <!--Custom Stylesheet-->
     <link rel='stylesheet' href='../../public/css/style.css' />
-    <title>Classnotes</title>
+    <title>Classnotes--<%= page %></title>
 </head>
 <body>
     <header>
         <!--Navbar brand-->  
         <nav class="navbar navbar-expand-lg navbar-light sticky-top"> <!--Query: need to continue post-header-->
-            <a class="navbar-brand" href="#">Classnotes</a>
+            <a class="navbar-brand" href="./">Classnotes</a>
             
             <!--Toggler (for Smaller Screens)-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,18 +32,18 @@
                         <a class="nav-link" href="#">Our Blog<span class="sr-only">(current)</span></a>
                         </li> -->
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Feedback</a>
+                        <a class="nav-link" href="./feedback">Feedback</a>
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Supported Courses
-                        </a>
+                        </a>`
                         <!-- Dropdown links -->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Supported Courses</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">University of Melbourne</a>
-                            <a class="dropdown-item" href="#">Monash University</a>
-                            <a class="dropdown-item" href="#">Holmesglen</a>
+                            <% coursesList.forEach(function(item){ %>
+                                <a class="dropdown-item" href="/courses/<% item.uni_shortname %>"><%= item.uni %></a>
+                            <% }) %>
                         </div>
                         </li>
                     </ul>

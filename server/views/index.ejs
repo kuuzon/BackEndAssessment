@@ -19,9 +19,10 @@
         </div>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner row w-100 mx-auto">
+                <% coursesList.forEach(function(item) { %>
                 <div class="carousel-item col-md-4 active">
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="./images/<%= item.uni_shortname %>_logo.jpg" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="./images/logos/<%= item.uni_shortname %>_logo" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title"><%= item.uni %></h4>
                             <p class="card-text"><strong>Courses Available: </strong><%= item.coursenames %></p>
@@ -29,29 +30,10 @@
                         </div>
                     </div>
                 </div>
+                <% }) %>
                 <div class="carousel-item col-md-4">
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="../../public/images/MonLogo.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Monash University</h4>
-                            <p class="card-text"><strong>Courses Available: </strong>Arts, Commerce, Engineering, Law & Sciences</p>
-                            <p class="card-text"><small class="text-muted">Last updated 2 hours ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-4">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="../../public/images/HolmLogo.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Holmesglen Institute</h4>
-                            <p class="card-text"><strong>Courses Available: </strong>Arts and Design, Hospitality & Web Development </p>
-                            <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-4">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="../../public/images/misclogo.png" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="../../public/images/misclogo" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">More Victorian Universities</h4>
                             <p class="card-text">Check in each week to see new Universities added to our database!</p>

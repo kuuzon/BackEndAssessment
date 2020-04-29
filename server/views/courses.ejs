@@ -10,50 +10,24 @@
     </div>
 
     <!--Course Containers-->
+    <!--Need help potentially: Loop the list below dynamically (nested array)-->
     <div class="container">
+        <% coursesList.forEach(function(item){ %>
         <div class="media">
-            <img src="../../public/images/courses/MULogosmall.jpg" class="align-self-center mr-3" alt="...">
+            <img src="./images/logos/<%= item.uni_shortname %>_logo_tn" class="align-self-center mr-3" alt="...">
             <div class="media-body">
-              <h5 class="mt-0">University of Melbourne</h5>
+              <h5 class="mt-0"><%= item.uni %></h5>
               <h6>Available Courses:</h6>
               <ul class="mb-0">
-                  <li>Arts</li>
-                  <li>Commerce</li>
-                  <li>Juris Doctor</li>
-                  <li>Sciences</li>
+                <% coursesList.forEach(function(item.coursenames){ %>
+                    <li><%= item.coursenames %></li>
+                <% }) %>
               </ul>
             </div>
-          </div>
-          <br>
-          <br>
-          <div class="media">
-            <img src="../../public/images/courses/MonLogosmall.png" class="align-self-center mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Monash University</h5>
-                <h6>Available Courses:</h6>
-                <ul class="mb-0">
-                    <li>Arts</li>
-                    <li>Commerce</li>
-                    <li>Engineering</li>
-                    <li>Law</li>
-                    <li>Sciences</li>
-                </ul>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="media">
-            <img src="../../public/images/courses/HolmLogosmall.jpg" class="align-self-center mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Holmesglen Institute</h5>
-                <h6>Available Courses:</h6>
-                <ul class="mb-0">
-                    <li>Arts and Design</li>
-                    <li>Hospitality</li>
-                    <li>Web Development</li>
-                </ul>
-            </div>
-          </div>
+        </div>
+        <br>
+        <br>
+        <% }) %>
     </div>
     <br>
     <br>

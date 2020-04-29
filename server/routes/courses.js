@@ -1,9 +1,14 @@
 const express = require ('express');
 const router = express.Router();
 
-const coursesRoutes = ()=> {
-    router.get('/', (req, res)=>{
-        return res.render('courses')
+module.exports = (param) => {
+    
+    const { coursesService } = param;
+    
+    router.get('/', async(req, res) => {
+
+        const coursesList = await coursesService.getListSmall();
+        return res.render('courses', {page: 'Supported Courses', coursesList})
     })
 
     router.get('/:university', (req, res)=>{
@@ -12,5 +17,3 @@ const coursesRoutes = ()=> {
 
     return router
 }
-
-module.exports = coursesRoutes
