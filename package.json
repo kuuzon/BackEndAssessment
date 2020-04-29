@@ -1,0 +1,26 @@
+{
+  "name": "backendassessment",
+  "version": "1.0.0",
+  "description": "Server Side Assessment - Term 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuuzon/BackEndAssessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuuzon/BackEndAssessment/issues"
+  },
+  "homepage": "https://github.com/kuuzon/BackEndAssessment#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "path": "^0.12.7"
+  }
+}
