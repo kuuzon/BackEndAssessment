@@ -1,7 +1,9 @@
 const express = require('express');
-const router = express.Router();
+
 const coursesRoutes = require ('./courses');
 const feedbackRoutes = require ('./feedback');
+
+const router = express.Router();
 
 module.exports = (param)=> {
     

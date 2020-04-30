@@ -22,7 +22,7 @@
                 <% coursesList.forEach(function(item) { %>
                 <div class="carousel-item col-md-4 active">
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="./images/logos/<%= item.uni_logo %>" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/images/logos/<%= item.uni_logo %>" alt="<%= item.uni_shortname %>">
                         <div class="card-body">
                             <h4 class="card-title"><%= item.uni %></h4>
                             <p class="card-text"><strong>Courses Available: </strong><%= item.coursenames %> </p>
@@ -33,7 +33,7 @@
                 <% }) %>
                 <div class="carousel-item col-md-4">
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="./images/logos/misclogo.png" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/images/logos/misclogo.png" alt="misclogo">
                         <div class="card-body">
                             <h4 class="card-title">More Victorian Universities</h4>
                             <p class="card-text">Check in each week to see new Universities added to our database!</p>

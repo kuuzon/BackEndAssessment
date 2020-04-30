@@ -26,18 +26,6 @@ class CoursesService {
             return{
                 uni: courses.uni,
                 uni_shortname: courses.uni_shortname,
-                uni_logo: courses.uni_logo
-            }
-        })
-    }
-
-    async getUnisSmall(){
-        const data = await this.getData();
-        return data.map((courses) => {
-            return{
-                uni: courses.uni,
-                uni_shortname: courses.uni_shortname,
-                uni_logo_small: courses.uni_logo_small
             }
         })
     }

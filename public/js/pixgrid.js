@@ -13,7 +13,7 @@ var pixGrid = function() {
             myOverlay.style.width = window.innerWidth + "px", myOverlay.style.height = window.innerHeight + "px", 
             myOverlay.style.top = window.pageYOffset + "px", myOverlay.style.left = window.pageXOffset + "px";
             var imageSrc = e.target.src, largeImage = document.createElement("img");
-            largeImage.id = "largeImage", largeImage.src = imageSrc.substr(0, imageSrc.length - 7) + ".jpg", 
+            largeImage.id = "largeImage", largeImage.src = imageSrc.substr(0, imageSrc.length - 7) + ".png", 
             largeImage.style.display = "block", largeImage.style.position = "absolute", largeImage.addEventListener("load", function() {
                 this.height > window.innerHeight && (this.ratio = window.innerHeight / this.height, 
                 this.height = this.height * this.ratio, this.width = this.width * this.ratio), this.width > window.innerWidth && (this.ratio = window.innerWidth / this.width, 

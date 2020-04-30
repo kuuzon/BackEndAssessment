@@ -41,7 +41,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="/courses">Supported Courses</a>
                             <div class="dropdown-divider"></div>
-                            <% coursesList.forEach(function(item){ %>
+                            <% unisList.forEach(function(item){ %>
                                 <a class="dropdown-item" href="/courses/<%= item.uni_shortname %>"><%= item.uni %></a>
                             <% }) %>
                         </div>

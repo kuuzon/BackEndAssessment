@@ -1,6 +1,6 @@
 const express = require ('express');
 const path = require('path'); 
-const bodyParser = require ('body-parser')
+const bodyParser = require ('body-parser');
 
 const createErrors = require ('http-errors'); 
 const routes = require('./routes/routes');
@@ -19,8 +19,8 @@ console.log(config.sitename)  //Testing the current development environment
 
 //Creating Objects from class modules
 const coursesService = new CoursesService(config.data.courses);
-const feedbackService = new FeedbackService (config.data.feedback);
 
+const feedbackService = new FeedbackService(config.data.feedback);
 
 //Development Environment Conditions
 app.set('view engine', 'ejs')
@@ -29,16 +29,16 @@ if(app.get('env') === 'development'){
 }
 
 //Setup of Express, BodyParser & Views
+app.set('views', path.join(__dirname, './views'))
+
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
-
-app.set('views', path.join(__dirname, './views'))
 
 //Middleware to ensure getList data is on each page
 app.use(async (req, res, next) => {
     try {
-        const coursesList = await coursesService.getList();
-        res.locals.coursesList = coursesList;
+        const unis = await coursesService.getUnis();
+        res.locals.unisList = unis;
         return next()
     }catch(err){
         return next(err)
@@ -48,7 +48,7 @@ app.use(async (req, res, next) => {
 //Pass Services as param to the routes
 app.use('/', routes({
     coursesService: coursesService,
-    feedbackService: feedbackService
+    feedbackService: feedbackService,
 }));
 
 //Error Functions
