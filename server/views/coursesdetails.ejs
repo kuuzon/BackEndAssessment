@@ -4,11 +4,11 @@
     <div id="coursesdetails-jumbotron">
         <div class="jumbotron text-center p-1" style="background-color: whitesmoke">
             <div class="container">
-                <h1 class="display-6">University of Melbourne</h1>
+                <h1 class="display-6"><%= courses.uni %></h1>
                 <br>
-                <img class="courses-img img-responsive" src="../../public/images/courses/MULogosmall.jpg" alt="MU_Logo" style="padding-bottom: 20px">
+                <img class="courses-img img-responsive" src="./images/courses/<%= courses.uni_logo_small %>" alt="MU_Logo" style="padding-bottom: 20px">
                 <br>
-                <h6>See a selection of the University of Melbourne notes available to Classnotes Subscribers.</h6>
+                <h6>See a selection of <%= courses.uni %> notes available to Classnotes Subscribers.</h6>
                 <i>Click on a subject for a preview link to see whether Classnotes can fit your fancy!</i>
             </div>
         </div>
@@ -20,10 +20,10 @@
         <ul class="list-unstyled">
             <!-- <% coursesList.forEach(function(item){ %>  ?????????  -->
             <li class="media">
-            <img src="/images/courses/<%= courses.notes.image %>" class="mr-3" alt="...">
+            <img src="./images/courses/<%= courses.notes.image %>" class="mr-3" alt="...">
             <div class="media-body">
-                <h3 class="mt-0 mb-1">
-                    <a href="./business_finance.html"><%= courses.notes.name %></a>
+                <h3 class="mt-0 mb-1"> 
+                    <a href="./<%= course.notes.name %>.html"><%= courses.notes.name %></a>
                 </h3>
                 <i>Submitted by <span class="badge badge-info"><%= courses.notes.author %></span> <%= courses.notes.time_stamp %></i>
             </div>

@@ -13,10 +13,10 @@ module.exports = (param) => {
 
     router.get('/:university', async(req, res, next)=>{
         try{
-            const promses = []
+            const promises = []
 
             promises.push(coursesService.getUniCourses(req.params.uni));  //Is this even necessary?
-            promise.push(coursesService.getNotesForUni(req.params.uni));
+            promises.push(coursesService.getNotesForUni(req.params.uni));
             const result = await Promise.all(promises);
 
             //THIS NEEDS HELP - CONFUSING

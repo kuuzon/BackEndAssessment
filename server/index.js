@@ -18,7 +18,6 @@ const config = configs[app.get('env')];
 
 console.log(config.sitename)  //Testing the current development environment
 
-
 //Creating Objects from class modules
 const coursesService = new CoursesService(config.data.courses);
 const feedbackService = new FeedbackService (config.data.feedback);
@@ -30,9 +29,6 @@ if(app.get('env') === 'development'){
     app.locals.pretty = true
 }
 
-//Routing & Services
-app.use('/', routes())
-
 
 //Setup of Express, BodyParser & Views
 app.use(express.static('public'))
@@ -40,6 +36,16 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('views', path.join(__dirname, './views'))
 
+//Middleware to ensure on each page
+app.use(async (req, res, next) => {
+    try {
+        const coursesList = await coursesService.getList();
+        res.locals.coursesList = coursesList;
+        return next()
+    }catch(err){
+        return next(err)
+    }
+});
 
 //Pass Services as param to the routes
 app.use('/', routes({

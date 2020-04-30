@@ -48,7 +48,7 @@ header .navbar-brand {
 #home .jumbotron {
   height: 58vh;
   padding-bottom: 40px;
-  background: url(../images/jumbotronhome.jpg) no-repeat 100% 5%;
+  background: url(../images/jumbotronhome.png) no-repeat 100% 5%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -59,7 +59,7 @@ header .navbar-brand {
 #feedback .jumbotron {
   height: 58vh;
   padding-bottom: 40px;
-  background: url(../images/jumbotronfeedback.jpg) no-repeat 100% 5%;
+  background: url(../images/jumbotronfeedback.png) no-repeat 100% 5%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -178,7 +178,7 @@ header .navbar-brand {
 
 /** Sign Up Reminder Card **/
 .card-signup {
-    background: url(../images/signupcard.jpg) no-repeat 100% 90%;
+    background: url(../images/signupcard.png  ) no-repeat 100% 90%;
     background-size: cover;
     padding-top: 20px;
     padding-bottom: 20px;
