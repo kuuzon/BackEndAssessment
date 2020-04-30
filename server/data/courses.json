@@ -1,6 +1,6 @@
 {
     "courses": [{
-        "uni" : "The University of Melbourne",
+        "uni" : "University of Melbourne",
         "uni_shortname": "Melbourne_University",
         "uni_logo": "Melbourne_University_logo.png",
         "uni_logo_small": "Melbourne_University_logo_tn.png",
@@ -23,10 +23,10 @@
         }]
     },{
         "uni" : "Monash University",
-        "uni_short": "Monash_University",
+        "uni_shortname": "Monash_University",
         "uni_logo": "Monash_University_logo.png",
         "uni_logo_small": "Monash_University_logo_tn.png",
-        "coursenames": ["Arts", "Commerce", "Engineering", "Law", "Sciences"],
+        "coursenames": ["Commerce", "Creative Arts", "Engineering", "Law", "Sciences"],
         "notes": [{
             "name": "Global Politics",
             "author": "examinator",
@@ -45,7 +45,7 @@
         }]
     },{
         "uni" : "Holmesglen Institute",
-        "uni_short": "Holmesglen",
+        "uni_shortname": "Holmesglen",
         "uni_logo": "Holmesglen_logo.png",
         "uni_logo_small": "Holmesglen_logo_tn.png",
         "coursenames": ["Arts and Design", "Hospitality", "Web Development"],

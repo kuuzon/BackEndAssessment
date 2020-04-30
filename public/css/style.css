@@ -194,6 +194,12 @@ header .navbar-brand {
   margin-right: 20px;
 }
 
+.courses-img {
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #dcdcdc;
+}
+
 .courses-title {
   font-size: 1.7em;
 }

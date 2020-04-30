@@ -4,7 +4,7 @@ const util = require('util');
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
-class FeedbackServices {
+class FeedbackService {
     constructor(datafile){
         this.datafile = datafile;
     }
@@ -30,4 +30,4 @@ class FeedbackServices {
 
 }
 
-module.exports = FeedbackServices
+module.exports = FeedbackService

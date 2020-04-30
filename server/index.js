@@ -6,7 +6,6 @@ const createErrors = require ('http-errors');
 const routes = require('./routes/routes');
 const configs = require('./config')
 
-
 //Load Services Modules
 const CoursesService = require ('./services/CoursesService');
 const FeedbackService = require ('./services/FeedbackService');
@@ -29,14 +28,13 @@ if(app.get('env') === 'development'){
     app.locals.pretty = true
 }
 
-
 //Setup of Express, BodyParser & Views
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('views', path.join(__dirname, './views'))
 
-//Middleware to ensure on each page
+//Middleware to ensure getList data is on each page
 app.use(async (req, res, next) => {
     try {
         const coursesList = await coursesService.getList();
@@ -52,7 +50,6 @@ app.use('/', routes({
     coursesService: coursesService,
     feedbackService: feedbackService
 }));
-
 
 //Error Functions
 app.use((req, res, next)=>{                              

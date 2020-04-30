@@ -6,7 +6,7 @@
             <div class="container">
                 <h1 class="display-6"><%= courses.uni %></h1>
                 <br>
-                <img class="courses-img img-responsive" src="./images/courses/<%= courses.uni_logo_small %>" alt="MU_Logo" style="padding-bottom: 20px">
+                <img class="courses-img img-responsive border rounded" src="/images/logos/<%= courses.uni_logo_small %>" alt="MU_Logo">
                 <br>
                 <h6>See a selection of <%= courses.uni %> notes available to Classnotes Subscribers.</h6>
                 <i>Click on a subject for a preview link to see whether Classnotes can fit your fancy!</i>
@@ -18,39 +18,18 @@
     <!--ADD: Star rating below titles of subjects-->
     <div class="container pb-5">
         <ul class="list-unstyled">
-            <!-- <% coursesList.forEach(function(item){ %>  ?????????  -->
+            <% notes.forEach(function(item){ %>
             <li class="media">
-            <img src="./images/courses/<%= courses.notes.image %>" class="mr-3" alt="...">
+            <img src="/images/courses/<%= item.image %>" class="mr-3 rounded" alt="...">
             <div class="media-body">
                 <h3 class="mt-0 mb-1"> 
-                    <a href="./<%= course.notes.name %>.html"><%= courses.notes.name %></a>
+                    <a href="./<%= item.name %>.html"><%= item.name %></a>
                 </h3>
-                <i>Submitted by <span class="badge badge-info"><%= courses.notes.author %></span> <%= courses.notes.time_stamp %></i>
+                <i>Submitted by <span class="badge badge-info"><%= item.author %></span> <%= item.time_stamp %></i>
             </div>
             </li>
-
-            <!-- <li class="media my-4">
-                <img src="../../public/images/courses/engiui.png" class="mr-3" alt="...">
-                <div class="media-body">
-                    <h3 class="mt-0 mb-1">
-                        <a href="./engineering_mathematics.html">Engineering Mathematics</a>
-                    </h3>
-                    <i>Submitted by <span class="badge badge-info">examinator</span> 6 months ago</i>
-                </div>
-            </li>
-
-            <li class="media">
-                <img src="../../public/images/courses/lawui.png" class="mr-3" alt="...">
-                <div class="media-body">
-                    <h3 class="mt-0 mb-1">
-                        <a href="./torts_law.html">Torts Law</a>
-                    </h3>
-                    <i>Submitted by <span class="badge badge-info">h1forfuns</span> 9 months ago</i>
-                </div>
-            </li> -->
-
-
-        <!-- <% }) %>  ????????????  -->
+            <br>
+        <% }) %>
         </ul>
     </div>
 
