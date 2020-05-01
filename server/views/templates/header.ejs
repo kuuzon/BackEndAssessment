@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <!--Custom Stylesheet-->
-    <link rel='stylesheet' href='/css/style.css' />
-    <title>Classnotes--<%= page %></title>
+    <link rel='stylesheet' href='/css/style.css' type='text/css' id="pagestyle" />
+    <title>Classnotes - <%= page %></title>
 </head>
 <body>
     <header>
         <!--Navbar brand-->  
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top"> <!--Query: need to continue post-header-->
+        <nav class="navbar navbar-expand-lg sticky-top"> <!--Query: need to continue post-header-->
             <a class="navbar-brand" href="/">Classnotes</a>
             
             <!--Toggler (for Smaller Screens)-->
@@ -46,9 +46,21 @@
                             <% }) %>
                         </div>
                         </li>
+                        <%# Change the stylesheet %>
+                        <li>
+                            <a onclick="swapStyleSheet('/css/style.css')" href="#">
+                                <img src="/images/light.png" class="btn" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="swapStyleSheet('/css/darkstyle.css')" href="#">
+                                <img src="/images/dark.png" class="btn" alt="">
+                            </a>
+                        </li>
+                        <%# /Change the stylesheet %>
                     </ul>
                     <form class="form-inline pl-4">
-                        <button class="btn btn-outline-primary btn-sm" type="button" href="#signinbutton">Sign In</button>
+                        <button class="btn btn-outline-info btn-sm" type="button" href="#signinbutton">Sign In</button>
                     </form>
                 </div>
             </div>

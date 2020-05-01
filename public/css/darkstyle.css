@@ -4,29 +4,29 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color: whitesmoke;
+  background-color: #313131;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  color: #181818;
+  color:  whitesmoke;
 }
 
 p {
     font-family: inherit;
     font-weight: 300;
-    color: #181818;
+    color: whitesmoke
 }
 
 i {
-    color: #181818;
+    color: whitesmoke;
 }
   
 li {
     font-family: inherit;
     font-weight: 300;
-    color: #181818;
+    color: whitesmoke
 }
 
 article {
@@ -34,17 +34,17 @@ article {
 }
 
 a {
-    color: #181818;
+    color: whitesmoke;
   }
 
 label {
-    color: #181818;
+    color: whitesmoke;
 }
 
 /** Navbar **/
 header .navbar {
     font: inherit;
-    background: whitesmoke;
+    background: #313131;
     margin-bottom: 0;
     border-radius: 0; 
 }
@@ -52,7 +52,7 @@ header .navbar {
 header .navbar-brand {
     font: inherit;
     font-size: larger;
-    color: #181818;
+    color: whitesmoke
 }
 
 /** Home Jumbotron **/
@@ -75,7 +75,7 @@ header .navbar-brand {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: whitesmoke;
+  color: #313131;
 }
 
 /** Main Content Container **/
@@ -85,7 +85,7 @@ header .navbar-brand {
 
 /** Card Carousel **/
 .card-title, .card-text  {
-    color: #181818;
+    color: black;
 }
 
 @media (min-width: 768px) {
@@ -232,13 +232,13 @@ header .navbar-brand {
 }
 
 #coursesdetails-jumbotron {
-    color: whitesmoke;
+    color: #313131;
 }
 
 div .container {
     padding-bottom: 20px;
-    background-color: whitesmoke;
-    color: whitesmoke;
+    background-color: #313131;
+    color: #313131;
 }
 
 
@@ -306,7 +306,7 @@ div .container {
 }
 
 .display-4 {
-    color: #181818;
+    color: whitesmoke;
 }
 
 /** Footer **/
