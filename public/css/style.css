@@ -42,24 +42,24 @@ label {
 }
 
 /** Navbar **/
-header .navbar {
-    font: inherit;
-    background: whitesmoke;
-    margin-bottom: 0;
-    border-radius: 0; 
+.site-header {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: #d0ecf0; 
+  opacity: 0.85;
+  font-family: 'Rubik', sans-serif;
 }
 
-header .navbar-brand {
-    font: inherit;
-    font-size: larger;
-    color: #181818;
+.navbar-brand{
+  font-family: 'Rubik', sans-serif;
+  padding-top: 0rem;
+  padding-bottom: .5rem;
 }
 
 /** Home Jumbotron **/
 #home .jumbotron {
   height: 58vh;
   padding-bottom: 40px;
-  background: url(../images/jumbotronhome.png) no-repeat 100% 5%;
+  background: url(/images/jumbotronhome.png) no-repeat 100% 5%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -70,7 +70,7 @@ header .navbar-brand {
 #feedback .jumbotron {
   height: 58vh;
   padding-bottom: 40px;
-  background: url(../images/jumbotronfeedback.png) no-repeat 100% 5%;
+  background: url(/images/jumbotronfeedback.png) no-repeat 100% 5%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -81,6 +81,12 @@ header .navbar-brand {
 /** Main Content Container **/
 .main-content {
     padding-bottom: 40px;
+}
+
+.checklist-img {
+  height: 80%;
+  width: 80%;
+  background-color: #dcdcdc;
 }
 
 /** Card Carousel **/

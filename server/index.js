@@ -34,11 +34,21 @@ app.set('views', path.join(__dirname, './views'))
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
-//Middleware to ensure getList data is on each page
+//Middleware to ensure getList & getNotes data is on each page
 app.use(async (req, res, next) => {
     try {
         const unis = await coursesService.getUnis();
         res.locals.unisList = unis;
+        return next()
+    }catch(err){
+        return next(err)
+    }
+});
+
+app.use(async (req, res, next) => {
+    try {
+        const notes = await coursesService.getNotes();
+        res.locals.notesList = notes;
         return next()
     }catch(err){
         return next(err)

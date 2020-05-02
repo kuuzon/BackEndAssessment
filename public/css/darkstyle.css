@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color: #313131;
+  background-color: #061837;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,17 +42,19 @@ label {
 }
 
 /** Navbar **/
-header .navbar {
-    font: inherit;
-    background: #313131;
-    margin-bottom: 0;
-    border-radius: 0; 
+.site-header {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: #061837; 
+  opacity: 0.85;
+  font-family: 'Rubik', sans-serif;
 }
 
-header .navbar-brand {
+.navbar-brand {
     font: inherit;
     font-size: larger;
-    color: whitesmoke
+    color: whitesmoke;
+    padding-top: 0rem;
+    padding-bottom: .5rem;
 }
 
 /** Home Jumbotron **/
@@ -75,12 +77,18 @@ header .navbar-brand {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #313131;
+  color: #061837;
 }
 
 /** Main Content Container **/
 .main-content {
     padding-bottom: 40px;
+}
+
+.checklist-img {
+  height: 80%;
+  width: 80%;
+  background-color: #dcdcdc;
 }
 
 /** Card Carousel **/
@@ -232,13 +240,13 @@ header .navbar-brand {
 }
 
 #coursesdetails-jumbotron {
-    color: #313131;
+    color: #061837;
 }
 
 div .container {
     padding-bottom: 20px;
-    background-color: #313131;
-    color: #313131;
+    background-color: #061837;
+    color: #061837;
 }
 
 

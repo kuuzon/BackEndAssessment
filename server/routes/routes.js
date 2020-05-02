@@ -11,9 +11,10 @@ module.exports = (param)=> {
     
     router.get('/', async(req, res, next) => {
         
-        const coursesList = await coursesService.getList()
+        const coursesList = await coursesService.getList();
+        const notesList = await coursesService.getNotes();
         
-        return res.render('index', {page: 'home', coursesList})
+        return res.render('index', {page: 'home', coursesList, notesList})
     })
 
     router.use('/courses', coursesRoutes(param));
