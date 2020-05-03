@@ -10,9 +10,9 @@
                 <div class="pixgrid clearfix">
                     <div class="row pb-2">
                         <% notesList.forEach(function(item){ %>
-                        <figure class="figure col-2">
-                            <img src="/images/courses/<%= item.image %>" class="figure-img img-fluid rounded" alt="Notes 1">
-                            <figcaption class="figure-caption d-inline-block text-truncate" style="max-width: 150px;"><%= item.name %></figcaption>
+                        <figure class="figure col-3">
+                            <img src="/images/courses/<%= item.image %>" class="figure-img rounded" alt="Notes 1">
+                            <figcaption class="figure-caption d-inline-block text-truncate" style="max-width: 120px;"><%= item.name %></figcaption>
                         </figure>
                         <% }) %>
                     </div>

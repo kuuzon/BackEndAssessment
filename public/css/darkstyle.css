@@ -261,6 +261,16 @@ div .container {
 }
 
 /** Feedback Items **/
+div .feedback-head {
+  font-size: 20px;
+  color: whitesmoke;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+div .feedback-message {
+  font-size: 16px;
+}
 
 .chat-display {
   min-height: 150px;
@@ -313,11 +323,13 @@ div .container {
   border-bottom: none;
 }
 
-.display-4 {
-    color: whitesmoke;
-}
-
 /** Footer **/
 footer .navbar-text {
     font-size: small;
+    color: whitesmoke;
+}
+
+.site-footer {
+  background-color: #061837; 
+  font-family: 'Rubik', sans-serif;
 }

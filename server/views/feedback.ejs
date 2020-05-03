@@ -1,10 +1,10 @@
 <%- include('templates/header'); -%>
 
     <!-- Feedback Form Column -->
-    <div class="container" id="feedback">
+    <div class="container pb-5" id="feedback">
         <div class="row">
           <div class="col-sm-4">
-            <h1 class="feedback-form-title">Send us Feedback</h1>
+            <h1 class="feedback-form-title pb-2">Send us Feedback</h1>
             <form class="feedback-form" action="/feedback" method="POST">
               <div class="form-group">
                 <label for="feedback-form-name">Name</label>
@@ -27,16 +27,16 @@
           <!--Feedback Responsese Column-->
           <aside class="col-sm-8">
             <div class="maincontent feedback">
-              <h2 class="article-title">Recent Feedback</h2>
+              <h2 class="article-title pb-2">Recent Feedback</h2>
               <div class="feedback-messages">
                 <% feedbackList.forEach(function(item) { %>
                 <div class="feedback-item item-list media-list">
                   <div class="feedback-item media">
                     <div class="feedback-info media-body">
                       <div class="feedback-head">
-                        <div class="feedback-title display-4"><%= item.title %> <small class="feedback-name badge badge-pill badge-info"><%= item.name %></small></div>
+                        <div class="feedback-title"><%= item.title %> <small class="feedback-name badge badge-pill badge-info"><%= item.name %></small></div>
                       </div>
-                      <div class="feedback-message"><h6><%= item.message %></h6></div>
+                      <div class="feedback-message"><p><%= item.message %></p></div>
                     </div>
                   </div>
                 </div>

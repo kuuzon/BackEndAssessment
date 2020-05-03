@@ -22,7 +22,9 @@
                 <% coursesList.forEach(function(item) { %>
                 <div class="carousel-item col-md-4 active">
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="/images/logos/<%= item.uni_logo %>" alt="<%= item.uni_shortname %>">
+                        <a href="/courses/<%= item.uni_shortname %>">
+                            <img class="card-img-top img-fluid" src="/images/logos/<%= item.uni_logo %>" alt="<%= item.uni_shortname %>">
+                        </a>
                         <div class="card-body">
                             <h4 class="card-title"><%= item.uni %></h4>
                             <p class="card-text"><strong>Courses Available: </strong><%= item.coursenames %> </p>
@@ -100,12 +102,42 @@
     <%- include('templates/trending'); -%>
 
     <!-- Sign up reminder -->
-    <div class="container">
+    <div class="container pb-4">
         <div class="card text-center">
             <div class="card-signup">
                 <h5 class="card-title">Find The Notes You Need Today</h5>
                 <p class="card-text">Become a Classnotes subscriber and gain access to hundreds of H1 notes!</p>
-                <a href="#signupbutton" class="btn btn-info">Sign Up</a>
+
+                <!-- Mock Sign In Popup (Modal JS) -->
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="signup">Sign Up</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-left">
+                                <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Username:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Password:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info">Sign In</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

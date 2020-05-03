@@ -14,7 +14,9 @@
     <div class="container">
         <% coursesList.forEach(function(item){ %>
         <div class="media">
-            <img src="./images/logos/<%= item.uni_logo_small %>" class="align-self-center mr-3 rounded" alt="...">
+            <a href="/courses/<%= item.uni_shortname %>">
+                <img src="./images/logos/<%= item.uni_logo_small %>" class="align-self-center mr-3 rounded" alt="...">
+            </a>
             <div class="media-body">
               <h5 class="mt-0"><%= item.uni %></h5>
               <h6>Available Courses:</h6>
