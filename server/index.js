@@ -18,7 +18,8 @@ const config = configs[app.get('env')];
 console.log(config.sitename)  //Testing the current development environment
 
 //Creating Objects from class modules
-const coursesService = new CoursesService(config.data.courses);
+//Explanation: We create new objects by constructing them with the designated "datafile" (our dynamic constructor param).  The new object is populated with the designated data and allows us to call the functions within the specific class (the methods) on that data."
+const coursesService = new CoursesService(config.data.courses);   //i.e. "config.data.courses" = "datafile"
 const feedbackService = new FeedbackService(config.data.feedback);
 const personalisedService = new PersonalisedService(config.data.users);
 
@@ -56,6 +57,7 @@ app.use(async (req, res, next) => {
 });
 
 //Pass Services as param to the routes
+//Explanation: We route the newly created objects to the pages which need the data and the specific functions which call different sets of data from within the datafile.
 app.use('/', routes({
     coursesService: coursesService,
     feedbackService: feedbackService,

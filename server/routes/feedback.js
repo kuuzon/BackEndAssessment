@@ -11,7 +11,7 @@ module.exports = (param) => {
         const feedbackList = await feedbackService.getList()
 
             try{
-                console.log(feedbackList)
+                // console.log(feedbackList)
                 return res.render('feedback', {
                     page: 'feedback', 
                     feedbackList, 
@@ -26,7 +26,6 @@ module.exports = (param) => {
     router.post('/', async(req, res, next) => {
         try{
             const feedbackList = await feedbackService.getList();
-            console.log(req.body)
 
             //Obtains & formats/cleans user feedback field entries
             const fbName = req.body.fbName.trim();

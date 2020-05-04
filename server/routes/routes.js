@@ -11,7 +11,7 @@ module.exports = (param)=> {
     const { personalisedService } = param; //Deconstructs personalisedService from param (which contains Services module)
     
     router.get('/', async(req, res, next) => {
-        
+
         const coursesList = await coursesService.getList();
         // const notesList = await coursesService.getNotes();
 
