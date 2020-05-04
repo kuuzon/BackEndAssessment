@@ -1,4 +1,4 @@
-const fs = requrie('fs');
+const fs = require('fs');
 const util = require('util');
 
 const readFile = util.promisify(fs.readFile);
@@ -22,7 +22,7 @@ class PersonalisedService {
     }
 
     //Method that reads users shortname (Alex Bicknell) & returns ONLY their favourited university (if there is one)
-    async getUsersFavouriteUniversity() {
+    async getUsersFavouriteUni(shortname) {
         const data = await this.getData();
         const user = data.users.find((user) => {
             return user.shortname === 'Alex_Bicknell';  //Work around: No login / user definition functions on the site

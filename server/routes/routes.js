@@ -15,7 +15,7 @@ module.exports = (param)=> {
         const coursesList = await coursesService.getList();
         const notesList = await coursesService.getNotes();
 
-        const usersFavouriteUni = await personalisedService.getUsersFavouriteUniversity("Alex_Bicknell"); //Method which sets the user & fav Uni
+        const usersFavouriteUni = await personalisedService.getUsersFavouriteUni("Alex_Bicknell"); //Method which sets the user & fav Uni
         const favouriteUniNotes = await coursesService.getNotesForUni(usersFavouriteUni);  //Method that obtains Notes which match Uni shortname
         
         return res.render('index', {page: 'home', coursesList, notesList, notes: favouriteUniNotes});

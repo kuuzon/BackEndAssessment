@@ -20,7 +20,7 @@ console.log(config.sitename)  //Testing the current development environment
 //Creating Objects from class modules
 const coursesService = new CoursesService(config.data.courses);
 const feedbackService = new FeedbackService(config.data.feedback);
-const personalisedService = new PersonalisedService(config.data.feedback);
+const personalisedService = new PersonalisedService(config.data.users);
 
 //Development Environment Conditions
 app.set('view engine', 'ejs')
