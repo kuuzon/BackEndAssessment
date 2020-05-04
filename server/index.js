@@ -9,7 +9,7 @@ const configs = require('./config')
 //Load Services Modules
 const CoursesService = require ('./services/CoursesService');
 const FeedbackService = require ('./services/FeedbackService');
-
+const PersonalisedService = require ('./services/PersonalisedService');
 
 //Starting app & development mode
 const app = express();
@@ -19,8 +19,8 @@ console.log(config.sitename)  //Testing the current development environment
 
 //Creating Objects from class modules
 const coursesService = new CoursesService(config.data.courses);
-
 const feedbackService = new FeedbackService(config.data.feedback);
+const personalisedService = new PersonalisedService(config.data.feedback);
 
 //Development Environment Conditions
 app.set('view engine', 'ejs')
@@ -59,6 +59,7 @@ app.use(async (req, res, next) => {
 app.use('/', routes({
     coursesService: coursesService,
     feedbackService: feedbackService,
+    personalisedService: personalisedService
 }));
 
 //Error Functions

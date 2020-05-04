@@ -5,7 +5,8 @@ module.exports = {
         sitename: 'Classnotes [Development]',
         data: {
             courses: path.join(__dirname, 'data/courses.json'),
-            feedback: path.join(__dirname, 'data/feedback.json')
+            feedback: path.join(__dirname, 'data/feedback.json'),
+            users: path.join(__dirname, 'data/users.json')
         }
     },
 
@@ -13,7 +14,8 @@ module.exports = {
         sitename: 'Classnotes',
         data: {
             courses: path.join(__dirname, 'data/courses.json'),
-            feedback: path.join(__dirname, 'data/feedback.json')
+            feedback: path.join(__dirname, 'data/feedback.json'),
+            users: path.join(__dirname, 'data/users.json')
         }
     }
 }

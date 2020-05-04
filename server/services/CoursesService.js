@@ -8,6 +8,7 @@ class CoursesService {
         this.datafile = datafile;
     }
 
+    //Passing in .json data method
     async getData(){
         const data = await readFile(this.datafile, 'utf8')
         
@@ -19,7 +20,7 @@ class CoursesService {
 
     }
 
-    //FUNCTION 1: Retrieve data array & output in specific manner
+    //METHOD 1: Retrieve data array & output in specific manner
     async getUnis(){
         const data = await this.getData();
         return data.map((courses) => {
@@ -54,8 +55,7 @@ class CoursesService {
         })
     }
 
-    //FUNCTION 2: Retrieve data to match specific user request 
-    //QUERY: (DO I NEED BOTH OR JUST ONE?)
+    //METHOD 2: Retrieve data to match specific user request 
     async getUniCourses(uni_shortname){
         const data = await this.getData();
         const courses = data.find((courses) => {
@@ -83,8 +83,7 @@ class CoursesService {
         return courses.notes
     }
 
-    //FUNCTION 3: Retrieve nested array data (courses & notes data)
-    
+    //METHOD 3: Retrieve nested array data (courses & notes data)
     async getCoursenames(){
         const data = await this.getData()
         const coursenames = data.map((courses) => {
@@ -114,7 +113,6 @@ class CoursesService {
         return allNotes;
 
     } 
-    //Possible error (More complex JSON array)
 }
 
 module.exports = CoursesService

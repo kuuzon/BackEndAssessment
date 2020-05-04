@@ -24,7 +24,7 @@ class FeedbackService {
         return JSON.parse(data);
     }
 
-    //Function to retrieve feedback data
+    //Method to retrieve feedback data
     async getList(){
         const data = await this.getData();
         return data;
