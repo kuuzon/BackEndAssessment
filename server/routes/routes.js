@@ -13,12 +13,14 @@ module.exports = (param)=> {
     router.get('/', async(req, res, next) => {
         
         const coursesList = await coursesService.getList();
-        const notesList = await coursesService.getNotes();
+        // const notesList = await coursesService.getNotes();
 
         const usersFavouriteUni = await personalisedService.getUsersFavouriteUni("Alex_Bicknell"); //Method which sets the user & fav Uni
         const favouriteUniNotes = await coursesService.getNotesForUni(usersFavouriteUni);  //Method that obtains Notes which match Uni shortname
+
+        res.locals.notesList = favouriteUniNotes;
         
-        return res.render('index', {page: 'home', coursesList, notesList, notes: favouriteUniNotes});
+        return res.render('index', {page: 'home', coursesList});
     })
 
     router.use('/courses', coursesRoutes(param));

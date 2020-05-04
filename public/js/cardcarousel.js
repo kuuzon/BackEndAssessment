@@ -3,7 +3,7 @@
 $(document).ready(function() {
   $("#myCarousel").on("slide.bs.carousel", function(e) {
     var $e = $(e.relatedTarget);
-    var idx = $e.index();
+    var idx = $("#myCarousel .carousel-item ").length ;
     var itemsPerSlide = 3;
     var totalItems = $("#myCarousel .carousel-item ").length  //#myCarousel 
 

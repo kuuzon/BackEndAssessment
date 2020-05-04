@@ -1,15 +1,1 @@
-[
-    {
-        "name":"Dave",
-        "title":"Amazing Site",
-        "message":"The notes I downloaded were so clear and concise.  Thanks Classnotes!"
-    },{
-        "name":"Corinna",
-        "title":"Great Notes!",
-        "message":"Excellent H1 notes - I passed my recent law exam and these notes were a livesaver!"
-    },{
-        "name":"Lister",
-        "title":"The Student's Holy Grail ",
-        "message":"Smeggin' great notes!"
-    }
-]
+[{"name":"Jason","title":"Essential","message":"Amazing notes!"},{"name":"Dave","title":"Amazing Site","message":"The notes I downloaded were so clear and concise.  Thanks Classnotes!"},{"name":"Corinna","title":"Great Notes!","message":"Excellent H1 notes - I passed my recent law exam and these notes were a livesaver!"},{"name":"Lister","title":"The Student's Holy Grail ","message":"Smeggin' great notes!"}]
